@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script defer src="script.js"></script>
+</head>
+<style> 
+    ::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+        background-color: transparent;
+        display: none;
+    }  
+</style>
+<body class="bg-[#111]">
+    <header class="overflow-hidden">
+        <section class="bg-zinc-900/[0.6] p-5 h-[60px] flex items-center justify-between text-white fixed z-10 w-full">
+            <div class="flex">
+                <img class="w-28 ml-10" src="https://github.com/abhishekabhiRaj/netflix-tailwind/blob/main/assets/images/logo.png?raw=true">
+                <ul class="flex items-center ps-3 gap-3">
+                    <li class="text-sm ps-3 cursor-pointer">Home</li>
+                    <li class="text-sm ps-3 cursor-pointer">TV Show</li>
+                    <li class="text-sm ps-3 cursor-pointer">Movie</li>
+                    <li class="text-sm ps-3 cursor-pointer">New & Popular</li>
+                    <li class="text-sm ps-3 cursor-pointer">My List</li>
+                </ul>
+            </div>
+            <ul class="flex gap-3 mr-10">
+                <li class="cursor-pointer"><i class="text-lg bi bi-search"></i></li>
+                <li class="cursor-pointer"><i class="text-lg bi bi-bell ps-3"></i></i></li>
+            </ul>
+        </section>
+    </header>
+
+    <section class="w-full relative overflow-hidden h-[90vh]">
+        <img id="main-bg">
+        <div class="text-white absolute bottom-20 left-14" id="banner">
+            <h1 class="text-[50px] font-extrabold tracking-wider mb-5" id="movie-title"></h1>
+            <button class="bg-zinc-800 py-1 px-6 font-semibold rounded-sm mr-5 hover:bg-white hover:text-black">Play</button>
+            <button class="bg-zinc-800 py-1 px-6 font-semibold rounded-sm hover:bg-white hover:text-black">My List</button>
+            <p class="mt-8 w-[35%]" id="movie-desc"></p>
+        </div>
+        <p class="h-[7.4rem] w-full absolute bottom-0" style="background:linear-gradient(180deg, transparent, rgba(37, 37, 37, .61), #111)"></p>
+    </section>
+
+    <section class="w-full p-3 overflow-hidden">
+        <h1 class="text-white text-2xl font-semibold mb-6 ml-4">NETFLIX ORIGINALS</h1>
+        <div class="owl-carousel owl-theme netflix-originals-carousel ml-3">
+            <!-- carousal data -->
+        </div>
+    </section>
+    
+    <section class="w-full p-3 overflow-hidden">
+        <h1 class="text-white text-2xl font-semibold mb-6 ml-4">Action Movies</h1>
+        <div class="owl-carousel owl-theme trending-now-carousel ml-3">
+            <!-- carousal data -->
+        </div>
+    </section>
+    
+    <section class="w-full p-3 overflow-hidden">
+        <h1 class="text-white text-2xl font-semibold mb-6 ml-4">Comedy Movies</h1>
+        <div class="owl-carousel owl-theme comedy-carousel ml-3">
+            <!-- carousal data -->
+        </div>
+    </section>
+
+</body>
+</html>
